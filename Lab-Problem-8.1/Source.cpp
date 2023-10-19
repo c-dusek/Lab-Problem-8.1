@@ -2,13 +2,22 @@
 #include <string>
 using namespace std;
 
-int countCharacter(string str)
+int countVowel(string str)
 {
 	int i = str.size();
-	return i;
+	int vowelcount = 0;
+	for (int n = 0; n <= i; n++)
+	{
+		char indiv = str[n];
+		if (indiv == 'A' || indiv == 'a' || indiv == 'e' || indiv == 'E' || indiv == 'I' || indiv == 'i' || indiv == 'O' || indiv == 'o' || indiv == 'U' || indiv == 'u')
+		{
+			vowelcount++;
+		}
+	}
+	return vowelcount;
 }
 int main()
 {
-	string input = "12345678";
-	cout << countCharacter(input);
+	string input = "aaa";
+	cout << countVowel(input);
 }

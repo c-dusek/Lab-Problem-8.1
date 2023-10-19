@@ -18,6 +18,15 @@ int countVowel(string str)
 }
 int main()
 {
-	string input = "aaa";
-	cout << countVowel(input);
+	string input;
+	while (true)
+	{
+		cout << "Enter a string or Q to quit: ";
+		getline(cin, input);
+		if (input == "Q" || input == "q")
+			break;
+		cout << "Vowel count: " << countVowel(input) << endl;
+
+	}
+
 }
